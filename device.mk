@@ -27,6 +27,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
 
+# Init scripts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.renoir.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.renoir.perf.rc
+
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.product.hardware.sku=nfc
